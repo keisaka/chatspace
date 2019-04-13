@@ -1,0 +1,35 @@
+.contents
+  = render 'shared/side-bar'
+  .main-content
+    .main-head
+      .main-header
+        %h2.main-header__group
+          aaa
+        %ul.main-header__member
+          Member :
+        %li.main-header__name
+          keisuke
+      .edit-btn
+        Edit
+    .messages
+      .message
+        %p.message__name
+          name
+        %p.message__date
+          2019/04/11
+        %p.message__text
+          Hello
+        %p.message__name
+          name
+        %p.message__date
+          2019/04/11
+        %p.message__text
+          Hello
+    .footer
+      %form.new-message
+        .input-box
+          %input.input-box__text
+        %label.image
+          %i.fa.fa-image
+        .send-btn
+          Send

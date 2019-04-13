@@ -1,0 +1,109 @@
+.main-content{
+    width: calc(100vw - 300px);
+    float: left;
+  .main-head{
+    height: 100px;
+    background-color: white;
+    padding: 0 40px;
+    border-bottom: solid 1px #eeeeee;
+    position: relative;
+    .main-header{
+      padding-top: 35px;
+      position: absolute;
+      &__group{
+        color: #333333;
+        font-size: 20px;
+      }
+      &__member{
+        margin-top: 15px;
+        color: #999999;
+        font-size: 12px;
+        float: left;
+        // position: relative;
+      }
+      &__name{
+        margin-top: 15px;
+        color: #999999;
+        font-size: 12px;
+        list-style: none;
+        float: left;
+        margin-left: 3px;
+      }
+    }
+    .edit-btn{
+      color: #38AEF0;
+      position: absolute;
+      right: 60px;
+      top: 28px;
+      padding: 10px 20px;
+      border: solid 1px;
+      cursor: pointer;
+    }
+  }
+  .messages{
+    height: calc(100vh - 200px);
+    background-color: #fafafa;
+    padding: 0 40px;
+    position: relative;
+    overflow: scroll;
+    .message{
+      padding-bottom: 40px;
+      position: absolute;
+      &__name{
+        color: #434a54;
+        font-size: 16px;
+        font-weight: bold;
+        float: left;
+      }
+      &__date{
+        color: #999999;
+        font-size: 12px;
+        margin-left: 10px;
+        float: left;
+      }
+      &__text{
+        color: #434a54;
+        font-size: 14px;
+        padding-top: 10px;
+        clear: left;
+        padding-bottom: 40px;
+      }
+    }
+  }
+  .footer{
+    height: 60px;
+    background-color: #ddd;
+    padding: 20px 40px;
+    .new-message{
+      position: relative;
+      .input-box{
+        width: 100%;
+        &__text{
+          height: 50px;
+          width: calc(100% - 160px);
+          padding: 0 40px 0 10px;
+          border-style: none;
+        }
+      }
+      .image{
+        position: absolute;
+        top: 10px;
+        right: 120px;
+        font-size: 1.3rem;
+        cursor: pointer;
+      }
+      .send-btn{
+        position: absolute;
+        top: 0;
+        right: 0 ;
+        color: white;
+        background-color: #38AEF0;
+        padding: 13px 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.message:first-child{
+  padding-top: 46px;
+}

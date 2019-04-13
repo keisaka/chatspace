@@ -1,0 +1,18 @@
+.side-bar
+  .head
+    .header
+      %h3.header__name
+        = current_user.name
+      %ul.header__icon
+        %li.list
+          / = link_to edit_user_path(current_user)
+          %i.fa.fa-cog
+        %li.list
+          / = link_to do
+          %i.fa.fa-pencil-square-o
+  .groups
+    .group
+      .group__name
+        aaa
+      .group__message
+        Hello
