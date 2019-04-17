@@ -4,32 +4,21 @@
     .main-head
       .main-header
         %h2.main-header__group
-          aaa
+          = @group.name
         %ul.main-header__member
           Member :
         %li.main-header__name
-          keisuke
+          - @group.users.each do |user|
+            = user.name
       .edit-btn
         Edit
     .messages
-      .message
-        %p.message__name
-          name
-        %p.message__date
-          2019/04/11
-        %p.message__text
-          Hello
-        %p.message__name
-          name
-        %p.message__date
-          2019/04/11
-        %p.message__text
-          Hello
-    .footer
-      %form.new-message
-        .input-box
-          %input.input-box__text
-        %label.image
-          %i.fa.fa-image
-        .send-btn
-          Send
+      = render @messages
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'

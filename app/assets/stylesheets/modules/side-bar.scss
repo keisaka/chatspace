@@ -39,13 +39,15 @@
     .group{
       padding: 20px 0 40px 0;
       font-weight: bold;
-      color: white;
       &__name{
         font-size: 15px;
+        color: white;
       }
       &__message{
+        color: white;
         font-size: 11px;
         padding-top: 5px;
+        margin-bottom: 40px;
       }
     }
   }
