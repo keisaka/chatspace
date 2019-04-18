@@ -39,6 +39,9 @@
     .group{
       padding: 20px 0 40px 0;
       font-weight: bold;
+      &__link{
+        text-decoration: none;
+      }
       &__name{
         font-size: 15px;
         color: white;

@@ -4,12 +4,24 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user)
+
+    respond_to do |format|
+      format.json {
+        if params[:leastMessage][:id].to_i != @group.messages.last.id
+          @newmessages = @group.messages.where("id > #{params[:leastMessage][:id]}")
+        end
+      }
+      format.html
+    end
   end
 
   def create
     @message = @group.messages.new(message_params)
     if @message.save
-      redirect_to group_messages_path(@group)
+      respond_to do |format|
+        format.html { redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'}
+        format.json { render json: @message}
+      end
     else
       @messages = @group.messages.includes(:user)
       flash.now[:alert] = 'メッセージを入力してください.'

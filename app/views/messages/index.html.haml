@@ -11,11 +11,11 @@
           - @group.users.each do |user|
             = user.name
       .edit-btn
-        Edit
+        = link_to 'edit', edit_group_path(@group), class: "edit-btn__link"
     .messages
       = render @messages
     .form
-      = form_for [@group, @message] do |f|
+      = form_for [@group, @message], html: {class: 'input'} do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
         .form__mask
           = f.label :image, class: 'form__mask__image' do

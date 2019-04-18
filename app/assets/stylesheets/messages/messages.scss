@@ -38,6 +38,11 @@
       padding: 10px 20px;
       border: solid 1px;
       cursor: pointer;
+      // text-decoration: none;
+      &__link{
+        text-decoration: none;
+        color: #38AEF0;
+      }
     }
   }
   .messages{
